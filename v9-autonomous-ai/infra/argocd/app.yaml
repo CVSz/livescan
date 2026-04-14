@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: v9-ai
+spec:
+  project: default
+  source:
+    repoURL: git@repo
+    targetRevision: HEAD
+    path: infra/helm
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
