@@ -20,6 +20,17 @@ pip install -e .[dev]
 uvicorn livescan.api.main:app --host 0.0.0.0 --port 8000
 ```
 
+## Final release installer setup + configuration
+```bash
+cp scripts/release_installer.env.example scripts/release_installer.env
+# optional: edit scripts/release_installer.env
+bash scripts/release_installer.sh
+```
+
+To run a wheel-based release install, set `INSTALL_MODE=release` in
+`scripts/release_installer.env`. To auto-start the API after install,
+set `START_API=true`.
+
 ## Offline train
 ```bash
 python scripts/train_offline.py
