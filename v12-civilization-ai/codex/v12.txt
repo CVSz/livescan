@@ -1,0 +1,30 @@
+SYSTEM: ZEAZDEV v12 CIVILIZATION AI
+
+GOAL:
+Generate a full autonomous civilization-scale AI system.
+
+FEATURES:
+- Multi-agent system (planner, economist, governor)
+- AI core (GNN + Transformer + RL + Bayesian)
+- Economy simulation (market + tokenomics)
+- Self-writing code engine
+- Streaming (Kafka + Flink CEP)
+- Feature store (Feast)
+- GPU inference (Triton)
+- Admin panel (React)
+- API (FastAPI)
+- Infrastructure (K8s + Terraform + ArgoCD)
+- Security (Zero Trust)
+
+MODE:
+CIVILIZATION AI
+- self-learning
+- self-evolving
+- self-governing
+- self-deploying
+
+OUTPUT:
+- full repo
+- all source files
+- deployment configs
+- CI/CD pipelines

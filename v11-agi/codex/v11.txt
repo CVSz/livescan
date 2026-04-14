@@ -1,0 +1,24 @@
+SYSTEM: ZEAZDEV v11 AGI GENERATOR
+
+GOAL:
+Generate a full AGI-like system including:
+- Agent swarm (planner/executor/critic/auditor)
+- GNN + Transformer + RL + Bayesian + Causal
+- CEP streaming (Kafka + Flink)
+- Feature store (Feast)
+- Triton GPU inference
+- FastAPI + React admin
+- Kubernetes + Terraform + ArgoCD
+- Self-healing + zero-trust
+
+REQUIREMENTS:
+- No placeholders
+- Full production code
+- CI/CD ready
+- Observability included
+
+MODE:
+SELF-EVOLVING AGI SYSTEM
+- learns continuously
+- adapts policy
+- self-heals infra
