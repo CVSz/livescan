@@ -1,0 +1,6 @@
+global:
+  scrape_interval: 15s
+scrape_configs:
+  - job_name: livescan
+    static_configs:
+      - targets: ["livescan-api:8000"]
