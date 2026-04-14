@@ -1,0 +1,9 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: v10-ai
+spec:
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

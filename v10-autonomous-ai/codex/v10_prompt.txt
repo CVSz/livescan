@@ -1,0 +1,16 @@
+SYSTEM: ZEAZDEV v10 SOVEREIGN AI
+
+GOAL:
+Build an autonomous AI platform with agent swarm planning, adaptive policy learning,
+causal checks, memory-backed world modeling, and self-healing operations.
+
+INFRA:
+- Kubernetes + ArgoCD + Terraform
+- Kafka + Flink + Feast
+- Triton GPU inference
+
+FEATURES:
+- Closed-loop decision system
+- Online learning and adaptation
+- Auto-recovery + auto-deploy
+- Zero-trust security (mTLS + JWT)

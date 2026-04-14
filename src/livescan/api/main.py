@@ -9,6 +9,8 @@ from livescan.api.schemas import PredictRequest, PredictResponse, TrainStepRespo
 from livescan.models.fusion import AdaptiveFusionModel
 from livescan.models.temporal_graph import TemporalGraphBuilder
 from livescan.models.uncertainty import mc_dropout_predict
+from livescan.sovereign.core.orchestrator import loop as sovereign_loop
+from livescan.sovereign.observability.metrics import record as record_sovereign_decision
 from livescan.training.engine import OnlineTrainer
 from livescan.utils.config import CONFIG
 from livescan.utils.logging import build_logger
@@ -91,3 +93,10 @@ def train_step(payload: PredictRequest):
     loss = TRAINER.train_step(batch.node_features, batch.adjacency, returns, label)
     TRAIN_COUNT.inc()
     return TrainStepResponse(loss=loss, batches_seen=TRAINER.state.batches_seen)
+
+
+@app.post("/v10/event")
+def process_sovereign_event(event: dict):
+    decision = sovereign_loop(event)
+    record_sovereign_decision()
+    return decision
