@@ -32,7 +32,6 @@ class TemporalGraphBuilder:
 
         nodes = sorted(g.nodes())[: self.max_nodes]
         node_index = {n: i for i, n in enumerate(nodes)}
-        n = len(nodes)
         node_features = torch.zeros((self.max_nodes, self.feature_dim), dtype=torch.float32)
         adjacency = torch.zeros((self.max_nodes, self.max_nodes), dtype=torch.float32)
 
