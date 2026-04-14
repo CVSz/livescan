@@ -32,8 +32,12 @@ UPGRADE_PIP="${UPGRADE_PIP:-true}"
 
 command -v "${PYTHON_BIN}" >/dev/null 2>&1 || fail "Python binary not found: ${PYTHON_BIN}"
 
-log "Creating virtual environment at ${VENV_DIR}"
-"${PYTHON_BIN}" -m venv "${VENV_DIR}"
+if [[ ! -d "${VENV_DIR}" ]]; then
+  log "Creating virtual environment at ${VENV_DIR}"
+  "${PYTHON_BIN}" -m venv "${VENV_DIR}"
+else
+  log "Virtual environment already exists at ${VENV_DIR}, skipping creation."
+fi
 
 # shellcheck disable=SC1091
 source "${VENV_DIR}/bin/activate"
