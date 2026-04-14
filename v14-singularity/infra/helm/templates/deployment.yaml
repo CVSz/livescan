@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: v14-singularity
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: v14-singularity
+  template:
+    metadata:
+      labels:
+        app: v14-singularity
+    spec:
+      containers:
+        - name: v14-singularity
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - containerPort: {{ .Values.service.targetPort }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: v14-singularity
+spec:
+  type: {{ .Values.service.type }}
+  selector:
+    app: v14-singularity
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.targetPort }}
