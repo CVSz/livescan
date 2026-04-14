@@ -56,7 +56,7 @@ case "${INSTALL_MODE}" in
     log "Building a wheel and installing from dist/"
     pip install build
     python -m build "${ROOT_DIR}"
-    latest_wheel="$(ls -t "${ROOT_DIR}"/dist/livescan-*.whl | head -n 1 || true)"
+latest_wheel="$(ls -t "${ROOT_DIR}"/dist/livescan-*.whl 2>/dev/null | head -n 1 || true)"
     [[ -n "${latest_wheel}" ]] || fail "No wheel file found under dist/"
     pip install "${latest_wheel}"
     ;;
