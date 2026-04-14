@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: v14
+spec:
+  replicas: 5
+  template:
+    spec:
+      containers:
+        - name: app
+          image: v14:latest
+          resources:
+            limits:
+              cpu: "2"
+              memory: "2Gi"
