@@ -40,3 +40,7 @@ python scripts/train_offline.py
 ```bash
 pytest -q
 ```
+
+## Reference architecture blueprints
+- `v11-agi/`: merged AGI-style sovereign platform blueprint.
+- `v12-civilization-ai/`: civilization-scale autonomous AI blueprint.
