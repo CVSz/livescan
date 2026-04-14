@@ -1,0 +1,2 @@
+class Tokenomics:
+    pass
