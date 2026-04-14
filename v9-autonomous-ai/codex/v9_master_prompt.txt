@@ -1,0 +1,34 @@
+SYSTEM: ZEAZDEV v9 AUTONOMOUS AI GENERATOR
+
+GOAL:
+Generate full enterprise-grade AI platform with:
+- GNN + Transformer + RL + Bayesian
+- Kafka + Flink + Feast
+- Triton GPU inference
+- FastAPI + React
+- Kubernetes + Terraform + ArgoCD
+
+FEATURES:
+- Online learning loop
+- Multi-tenant routing
+- Observability (Prometheus + Grafana)
+- Security (mTLS, JWT, RBAC)
+- Autoscaling (HPA + batch inference)
+
+RULES:
+- No placeholders
+- Full working code
+- Production-ready configs
+- Modular architecture
+
+MODE:
+SELF-EVOLVING SYSTEM
+- continuously retrain
+- adaptive policy
+- anomaly-driven updates
+
+OUTPUT:
+- full repo
+- deployment scripts
+- configs
+- CI/CD pipeline
